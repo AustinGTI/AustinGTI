@@ -50,20 +50,21 @@ function durationToDate(duration) {
       ? ""
       : " " + duration[0].getFullYear()
   }`;
-  let to = `${monthNames[duration[1].getMonth()]} ${duration[1].getFullYear()}`;
+  let to = (duration[1].getMonth() === new Date().getMonth()) ? "Now" : `${monthNames[duration[1].getMonth()]} ${duration[1].getFullYear()}`;
   return `${from} - ${to}`;
 }
 
 function ResumeDetail({ data }) {
   const { organization, link, type, description, duration } = data;
   console.log("new");
+  const verbTense = (duration[1].getMonth() !== new Date().getMonth()) ? ["Went","Worked"] : ["Go","Work"];
   return (
     <div>
       <span>{type === "school" ? <School /> : <Work />}</span>
       <p className="mono primary">{durationToDate(duration)}</p>
 
       <h2>
-        {type === "school" ? "Went to school at " : "Worked at "}
+        {type === "school" ? `${verbTense[0]} to school at ` : `${verbTense[1]} at `}
         <a className="primary orglink" href={link}>
           {organization}
         </a>
@@ -448,7 +449,7 @@ export default function Resume() {
         "Maintaining and debugging large API systems based on Laravel and building media websites with medium to high levels of user traffic using Laravel\n" +
           "and Vue.js",
       position: "Web Developer",
-      duration: [new Date(2022, 9), new Date(2022, 11)],
+      duration: [new Date(2022, 9),new Date()],
     }
   ];
   return (
