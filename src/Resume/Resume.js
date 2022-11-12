@@ -436,10 +436,20 @@ export default function Resume() {
       link: "https://microhouse.co.ke/",
       type: "work",
       description:
-        "Managed, cleaned and analyzed a large SQL database of user data in a team with 2 other engineers",
+          "Managed, cleaned and analyzed a large SQL database of user data in a team with 2 other engineers",
       position: "Data Analyst",
-      duration: [new Date(2022, 2), new Date(2022, 7)],
+      duration: [new Date(2022, 2), new Date(2022, 8)],
     },
+    {
+      organization: "The Standard Group PLC",
+      link: "https://standardmedia.co.ke",
+      type: "work",
+      description:
+        "Maintaining and debugging large API systems based on Laravel and building media websites with medium to high levels of user traffic using Laravel\n" +
+          "and Vue.js",
+      position: "Web Developer",
+      duration: [new Date(2022, 9), new Date(2022, 11)],
+    }
   ];
   return (
     <div id="myresume">
