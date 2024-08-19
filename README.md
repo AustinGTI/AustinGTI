@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @AustinGTI
 - 👀 I’m interested in Machine Learning and Web Development
-- 🌱 I’m currently learning Django 
+- 🌱 I’m currently learning pytorch 
 - 💞️ I’m looking to collaborate on unique implementations of ML in real-world scenarios
 - 📫 How to reach me : gathiiaustin@gmail.com
 
